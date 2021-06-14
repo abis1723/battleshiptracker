@@ -53,7 +53,7 @@ namespace Battleshipstatetracker.utils
             }
         }
 
-        public void HiddenBoard()
+        public void hiddenBoard()
         {
             for (int x = 0; x < boardDimension; x++)
             {
@@ -237,6 +237,7 @@ namespace Battleshipstatetracker.utils
                 }
                 Console.WriteLine();
             }
+
             if (x < 9)
                 Console.Write(x + 1 + "  ");
             else

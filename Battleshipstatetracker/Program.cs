@@ -72,7 +72,7 @@ namespace Battleshipstatetracker
             if (player == "player1")
             {
                 Console.WriteLine("Player-1 Secret Board:");
-                player1.HiddenBoard();
+                player1.hiddenBoard();
                 Console.WriteLine("\nPlayer-2 Board:");
                 player2.Board();
                 Console.WriteLine("\nTurn for player-1: ");
@@ -80,7 +80,7 @@ namespace Battleshipstatetracker
             else
             {
                 Console.WriteLine("Player-2  Secret Board:");
-                player2.HiddenBoard();
+                player2.hiddenBoard();
                 Console.WriteLine("\nPlayer-1 Board:");
                 player1.Board();
                 Console.WriteLine("\nTurn for Player-2: ");
