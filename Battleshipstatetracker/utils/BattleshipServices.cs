@@ -28,10 +28,10 @@ namespace Battleshipstatetracker.utils
 
                 for (int y = 0; y < boardDimension; y++)
                 {
-                    switch(board[x, y])
-                        {
+                    switch (board[x, y])
+                    {
                         case boardStatus.empty:
-                            Console.Write('-' + "  ") ;
+                            Console.Write('-' + "  ");
                             break;
                         case boardStatus.ship:
                             Console.Write('S' + "  ");
@@ -86,7 +86,7 @@ namespace Battleshipstatetracker.utils
             }
         }
 
-       
+
         private void createEmptyBoard()
         {
             for (int x = 0; x < boardDimension; x++)
@@ -117,7 +117,7 @@ namespace Battleshipstatetracker.utils
             int x = -1;
             int y = -1;
             boardStatus[,] tempBoard = new boardStatus[boardDimension, boardDimension];
-            for (x = 0; x < boardDimension; x++) 
+            for (x = 0; x < boardDimension; x++)
             {
                 for (y = 0; y < boardDimension; y++)
                 {
@@ -128,14 +128,14 @@ namespace Battleshipstatetracker.utils
             int numShips = shipCount();
             while (true)
             {
-                for (x = 0; x < boardDimension; x++) 
+                for (x = 0; x < boardDimension; x++)
                 {
                     for (y = 0; y < boardDimension; y++)
                     {
                         secretBoard[x, y] = tempBoard[x, y];
                     }
                 }
-                while (true) 
+                while (true)
                 {
                     x = rand.Next(boardDimension);
                     y = rand.Next(boardDimension);
@@ -196,11 +196,11 @@ namespace Battleshipstatetracker.utils
                         }
                     }
                 }
-               if (shipCount() - numShips == size) break; 
+                if (shipCount() - numShips == size) break;
             }
         }
 
-        public void fireShot(int x, int y) 
+        public void fireShot(int x, int y)
         {
             int zeroValue = 0;
             switch (secretBoard[x - 1, y - 1])
@@ -238,7 +238,7 @@ namespace Battleshipstatetracker.utils
                 Console.WriteLine();
             }
             if (x < 9)
-             Console.Write(x + 1 + "  ");
+                Console.Write(x + 1 + "  ");
             else
                 Console.Write(x + 1 + " ");
         }
